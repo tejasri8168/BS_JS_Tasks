@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Include Bootstrap CSS and other dependencies here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form class="well form-horizontal" action=" " method="post" id="contact_form">
+            <fieldset>
+            
+
+                
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="First Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Last Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">E-Mail</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label">Phone #</label>
+              <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Address</label>
+                    <div class="col-md-4 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input name="address" placeholder="Address" class="form-control" type="text">
+                      </div>
+                    </div>
+                    <!-- Text input-->
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">City</label>
+                    <div class="col-md-4 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input name="city" placeholder="city" class="form-control"  type="text">
+                      </div>
+                    </div>
+                  </div>
+<!-- Select Basic -->
+<div class="form-group">
+    <label class="col-md-4 control-label">State</label>
+    <div class="col-md-4 selectContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+        <select name="state" class="form-control selectpicker">
+          <option value=" ">Please select your state</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Puducherry">Puducherry</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+
+          <!-- Add more options here -->
+        </select>
+      </div>
+    </div>
+  </div>
+                <!-- radio checks -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Do you have hosting?</label>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="sponsorship" value="yes" /> Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="hosting" value="no" /> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text area -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Project Message</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <textarea class="form-control" name="comment" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning">Send <span
+                                class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Include jQuery and Bootstrap JavaScript libraries here -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Include BootstrapValidator JavaScript library here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+      $('#contact_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+          valid: 'glyphicon glyphicon-ok',
+          invalid: 'glyphicon glyphicon-remove',
+          validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+          first_name: {
+            validators: {
+              stringLength: {
+                min: 2
+              },
+              notEmpty: {
+                message: 'Please supply your first name'
+              }
+            }
+          },
+          last_name: {
+            validators: {
+              stringLength: {
+                min: 2
+              },
+              notEmpty: {
+                message: 'Please supply your last name'
+              }
+            }
+          },
+          email: {
+            validators: {
+              notEmpty: {
+                message: 'Please supply your email address'
+              },
+              emailAddress: {
+                message: 'Please supply a valid email address'
+              }
+            }
+          },
+          phone: {
+            validators: {
+              notEmpty: {
+                message: 'Please supply your phone number'
+              },
+              phone: {
+                country: 'US',
+                message: 'Please supply a valid phone number with area code'
+              }
+            }
+          },
+          address: {
+            validators: {
+              stringLength: {
+                min: 8
+              },
+              notEmpty: {
+                message: 'Please supply your street address'
+              }
+            }
+          },
+          city: {
+            validators: {
+              stringLength: {
+                min: 4
+              },
+              notEmpty: {
+                message: 'Please supply your city'
+              }
+            }
+          },
+          state: {
+            validators: {
+              notEmpty: {
+                message: 'Please select your state'
+              }
+            }
+          },
+          zip: {
+            validators: {
+              notEmpty: {
+                message: 'Please supply your zip code'
+              },
+              zipCode: {
+                country: 'US',
+                message: 'Please supply a valid zip code'
+              }
+            }
+          },
+          comment: {
+            validators: {
+              stringLength: {
+                min: 10,
+                max: 200,
+                message: 'Please enter at least 10 characters and no more than 200'
+              },
+              notEmpty: {
+                message: 'Please supply a description of your project'
+              }
+            }
+          }
+        }
+      }).on('success.form.bv', function (e) {
+        $('#success_message').slideDown({ opacity: "show" }, "slow");
+        $('#contact_form').data('bootstrapValidator').resetForm();
+        e.preventDefault();
+        var $form = $(e.target);
+        var bv = $form.data('bootstrapValidator');
+        $.post($form.attr('action'), $form.serialize(), function (result) {
+          console.log(result);
+        }, 'json');
+      });
+    });
+  </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

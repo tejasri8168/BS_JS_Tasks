@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <script type="text/javascript">
+         var img = null;
+         var intervalId = null; // Variable to store the ID of the interval
+
+         function init() {
+            img = document.getElementById('myimg');
+            img.style.position = 'relative';
+            img.style.left = '50px';
+         }
+
+         function moveRight() {
+            if (intervalId === null) { // If the train is not moving
+               intervalId = setInterval(function() {
+                  img.style.left = parseInt(img.style.left) + 10 + 'px'; // Move the train a little bit every time
+               }, 100); // Specify the interval in milliseconds
+            }
+         }
+
+         function stopMoving() {
+            if (intervalId !== null) { // If the train is moving
+               clearInterval(intervalId); // Stop moving the train
+               intervalId = null; // Reset the interval ID
+            }
+         }
+
+         window.onload = init;
+      </script>
+   </head>
+
+   <body>
+      <form>
+         <img id="myimg" src="train1.png" />
+         <center>
+            <h1 style="color: blue; padding: 10px"><b>Click the following buttons to handle animation</b></h1>
+            <input type="button" value="Start" onclick="moveRight();" />
+            <input type="button" value="Stop" onclick="stopMoving();" />
+         </center>
+      </form>
+   </body>
+</html>

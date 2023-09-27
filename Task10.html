@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 style="color: rgb(28, 232, 14); padding: 10px">Current Date and Time</h2>
+
+<button onclick="showDate()">Show Date</button>
+<button onclick="showTime()">Show Time</button>
+
+<p id="date"></p>
+<p id="time"></p>
+
+<script>
+function showDate() {
+  var dt = new Date();
+  document.getElementById("date").innerHTML = "Date: " + dt.toDateString();
+}
+
+function showTime() {
+  var dt = new Date();
+  document.getElementById("time").innerHTML = "Time: " + dt.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>

@@ -1,143 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <style>
-        /* Styles */
-        #contact-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding-top: 20px; /* Adjust the top padding as needed */
+	<head>
+		<script type='text/javascript' src='jquery.min.js'></script>
+    </head>
+	
+	<!-- Styles -->
+	<style>
+		#contact label{
+			display: inline-block;
+			width: 100px;
+			text-align: right;
+		}
+		#contact_submit{
+			padding-left: 100px;
+		}
+		#contact div{
+			margin-top: 1em;
+		}
+		textarea{
+			vertical-align: top;
+			height: 5em;
+		}
+			
+		.error{
+			display: none;
+			margin-left: 10px;
+		}		
+		
+		.error_show{
+			color: red;
+			margin-left: 10px;
+		}
+		
+		input.invalid, textarea.invalid{
+			border: 2px solid red;
+		}
+		
+		input.valid, textarea.valid{
+			border: 2px solid green;
+		}
+	</style>
+	
+	<!-- JavaScript Code -->
+	<script>
+		$(document).ready(function() {
+    // Real-time Validation ...
+
+    // After Form Submitted Validation
+    $("#contact_submit button").click(function(event) {
+        // Prevent the form from submitting by default
+        event.preventDefault();
+
+        // Perform validation for each input field
+        var form_data = $("#contact").serializeArray();
+        var error_free = true;
+
+        for (var input in form_data) {
+            var element = $("#contact_" + form_data[input]['name']);
+            var valid = element.hasClass("valid");
+            var error_element = $("span.error", element.parent());
+
+            if (!valid) {
+                error_element.removeClass("error").addClass("error_show");
+                error_free = false;
+            } else {
+                error_element.removeClass("error_show").addClass("error");
+            }
         }
 
-        #contact label {
-            display: inline-block;
-            width: 100px;
-            text-align: right;
+        if (!error_free) {
+            // Display a general error message
+            alert('Please fill in all required fields.');
+        } else {
+            // If all inputs are valid, submit the form
+            $("#contact").submit();
         }
+    });
+});
 
-        #contact_submit {
-            padding-left: 100px;
-        }
-
-        #contact div {
-            margin-top: 1em;
-        }
-
-        textarea {
-            vertical-align: top;
-            height: 5em;
-        }
-
-        .error {
-            display: none;
-            margin-left: 10px;
-        }
-
-        .error_show {
-            color: red;
-            margin-left: 10px;
-        }
-
-        input.invalid,
-        textarea.invalid {
-            border: 2px solid red;
-        }
-
-        input.valid,
-        textarea.valid {
-            border: 2px solid green;
-        }
-
-        /* Centered message at the top */
-        #output_message {
-            text-align: center;
-            background-color: #f2f2f2;
-            padding: 10px;
-            display: none;
-            width: 100%;
-        }
-    </style>
-    <script>
-        $(document).ready(function () {
-            // Real-time Validation ...
-
-            // After Form Submitted Validation
-            $("#contact_submit button").click(function (event) {
-                // Prevent the form from submitting by default
-                event.preventDefault();
-
-                // Perform validation for each input field
-                var form_data = $("#contact").serializeArray();
-                var error_free = true;
-
-                for (var input in form_data) {
-                    var element = $("#contact_" + form_data[input]['name']);
-                    var valid = element.hasClass("valid");
-                    var error_element = $("span.error", element.parent());
-
-                    if (!valid) {
-                        error_element.removeClass("error").addClass("error_show");
-                        error_free = false;
-                    } else {
-                        error_element.removeClass("error_show").addClass("error");
-                    }
-                }
-
-                if (!error_free) {
-                    // Display a general error message
-                    $("#output_message").html('Please fill in all required fields.').show();
-                } else {
-                    // If all inputs are valid, submit the form
-                    $("#output_message").hide(); // Hide the output message
-                    $("#contact").submit();
-                }
-            });
-        });
-    </script>
-</head>
-<body>
-    <!-- Output Message -->
-    <div id="output_message"></div>
-
-    <div id="contact-container">
-        <form id="contact" method="post" action="">
-            <!-- Name -->
-            <div>
-                <label for="contact_name">Name:</label>
-                <input type="text" id="contact_name" name="name"></input>
-                <span class="error">This field is required</span>
-            </div>
-            <!-- Email -->
-            <div>
-                <label for="contact_email">Email:</label>
-                <input type="email" id="contact_email" name="email"></input>
-                <span class="error">A valid email address is required</span>
-            </div>
-            <!-- Website -->
-            <div>
-                <label for="contact_website">Website:</label>
-                <input type="url" id="contact_website" name="website"></input>
-                <span class="error">A valid URL is required</span>
-            </div>
-            <!-- Message -->
-            <div>
-                <label for="contact_message">Message:</label>
-                <textarea id="contact_message" name="message"></textarea>
-                <span class="error">This field is required</span>
-            </div>
-            <!-- Submit Button -->
-            <div id="contact_submit">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
-
-    <!-- Code injected by live-server -->
-    <script>
-        // Your live-server code here
-    </script>
+	</script>
+	
+    <body>
+		<form id="contact" method="post" action="">
+			<!-- Name -->
+			<div>
+				<label for="contact_name">Name:</label>
+				<input type="text" id="contact_name" name="name"></input>
+				<span class="error">This field is required</span>
+			</div>
+			<!-- Email -->
+			<div>
+				<label for="contact_email">Email:</label>
+				<input type="email" id="contact_email" name="email"></input>
+				<span class="error">A valid email address is required</span>				
+			</div>						
+			<!--Website -->
+			<div>
+				<label for="contact_website">Website:</label>
+				<input type="url" id="contact_website" name="website"></input>
+				<span class="error">A valid url is required</span>								
+			</div>						
+			<!-- Message -->
+			<div>
+				<label for="contact_message">Message:</label>
+				<textarea id="contact_message" name="message"></textarea>
+				<span class="error">This field is required</span>												
+			</div>					
+			<!-- Submit Button -->
+			<div id="contact_submit">				
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
-</html>
+</html> 
